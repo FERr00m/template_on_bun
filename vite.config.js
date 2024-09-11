@@ -7,6 +7,8 @@ import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
   build: {
+    emptyOutDir: true,
+    polyfillModulePreload: false,
     rollupOptions: {
       output: {
         entryFileNames: `assets/[name].js`,
@@ -14,10 +16,6 @@ export default defineConfig({
         //assetFileNames: `assets/[name].[ext]`,
         assetFileNames: (assetInfo) => {
           let extType = assetInfo.name.split('.').at(1);
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-            extType = 'img';
-            return `assets/${extType}/[name][extname]`;
-          }
           if (/woff|woff2|eot|ttf/i.test(extType)) {
             //console.log(assetInfo);
             extType = 'fonts';
@@ -46,14 +44,3 @@ export default defineConfig({
     },
   },
 });
-
-// export default {
-//   plugins: [
-//     ,
-//   ],
-//   build: {
-//     rollupOptions: {
-//       input: ['index.pug'],
-//     },
-//   },
-// };

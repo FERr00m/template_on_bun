@@ -12,12 +12,13 @@
 @import 'base/fonts', 'base/base', 'base/effects', 'base/helpers',
   'base/animations';
 // 2. Components
-@import 'components/button', 'components/svg-icons', 'components/forms';
+@import 'components/main-loader', 'components/button', 'components/svg-icons',
+  'components/forms';
 // 4. Layout-related sections
 @import 'layout/header', 'layout/main', 'layout/footer', 'layout/modal';
 
 // 6. Page-specific styles
-@import 'pages/main', 'pages/404';
+@import 'pages/service', 'pages/main', 'pages/404';
 
 // 7. Themes
 @import 'themes/default';

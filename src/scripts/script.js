@@ -8,5 +8,11 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
-  console.log('load');
+  const hideMainLoader = () => {
+    document.body.classList.remove('not-ready');
+  };
+
+  setTimeout(() => {
+    hideMainLoader();
+  }, 2000);
 });

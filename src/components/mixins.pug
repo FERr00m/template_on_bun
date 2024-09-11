@@ -1,6 +1,6 @@
 mixin icon(name, w=100, h=100)
   svg(class=`svg-icon svg-icon--${name}`, width=`${w}`, height=`${h}`)&attributes(attributes)
-    use(xlink:href=`/img/icons.svg#${name}`)
+    use(xlink:href=`/assets/svg/icons.svg#${name}`)
     if block
       block
     else
@@ -23,8 +23,8 @@ mixin pictureLazy(name, w=500, h=500, alt='', ext='jpg')
 
 mixin picture(name, w=500, h=500, alt='', ext='jpg')
   picture&attributes(attributes)
-    source(type='image/webp' srcset=`/img/${name}.webp`)
-    img(src=`/img/${name}.${ext}` width=`${w}`, height=`${h}` alt=`${alt}`)
+    source(type='image/webp' srcset=`/assets/img/${name}.webp`)
+    img(src=`/assets/img/${name}.${ext}` width=`${w}`, height=`${h}` alt=`${alt}`)
 
 //--------------------
 

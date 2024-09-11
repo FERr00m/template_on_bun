@@ -1,5 +1,5 @@
-function requireAll(r) {
-  r.keys().forEach(r);
-}
+// function requireAll(r) {
+//   r.keys().forEach(r);
+// }
 
-requireAll(require.context("@/svg/", true, /\.svg$/));
+// requireAll(require.context("@/svg/", true, /\.svg$/));

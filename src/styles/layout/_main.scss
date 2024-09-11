@@ -2,7 +2,23 @@
   flex: 1 0 auto;
   position: relative;
   &.main--site-pages {
+    overflow: hidden;
     min-height: 100vh;
+    background-image: url('/assets/img/good2_0.webp');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: changeBG 8s infinite linear;
+    color: #ffffff;
+    & * {
+      color: #ffffff;
+    }
+    & canvas {
+      display: block;
+      position: fixed;
+      z-index: -1;
+      top: 0;
+    }
   }
   @include media('max', 'md') {
     padding-top: 110px;
