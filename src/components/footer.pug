@@ -1,0 +1,47 @@
+footer.footer
+  .container
+    .row
+      .col-lg-2
+        +link().logo.footer__logo
+          +picture('logo-white', 210, 34, 'Логотип', 'png').footer__img
+          span.logo__text.logo__text-footer ООО «Специальные Системы. Фотоника» официальный дистрибьютор в России и ЕАЭС
+      .col-lg-7
+        .footer__middle-wrap
+          ul.footer__list-main
+            - var footerLinks = ['Применения', 'Сервисы', 'События', 'Доставка и оплата', 'Компания', 'Контакты']
+            each item in footerLinks
+              li.footer__list-main-item
+                +link(item).footer__list-main-link
+
+          ul.footer__list-add
+            - var footerLinksAdd = ['Политика конфеденциальности', 'Условия использования', 'Cookies']
+            each item in footerLinksAdd
+              li.footer__list-add-item
+                +link(item).footer__list-add-link
+          .authors.d-none.d-md-flex
+            .authors__wrap.authors__copyright
+              +icon('copyright', 38, 38).authors__icon
+              | ООО «Специальные Системы. Фотоника»
+              br
+              | Все права защищены © 2022
+            +link('', 'https://stekspb.ru/').authors__wrap.authors__stek(title='ООО «СТЕК»' target="_blank")
+              +icon('logo_stek', 39, 38).authors__icon
+              | ООО «СТЕК»
+              br
+              | Дизайн и разработка
+      .col-lg-3.footer__socials-container
+        +link(contacts.phone.text, contacts.phone.value).footer__tel
+        p.footer__address.
+          Россия, Санкт-Петербург, Ленинский проспект, 100
+        +link(contacts.email.text, contacts.email.value).footer__email
+      .authors.d-flex.d-md-none
+        .authors__wrap.authors__copyright
+          +icon('copyright', 38, 38).authors__icon
+          | ООО «Специальные Системы. Фотоника»
+          br
+          | Все права защищены © 2022
+        +link('', 'https://stekspb.ru/').authors__wrap.authors__stek(title='ООО «СТЕК»' target="_blank")
+          +icon('logo_stek', 39, 38).authors__icon
+          | ООО «СТЕК»
+          br
+          | Дизайн и разработка

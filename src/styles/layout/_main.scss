@@ -1,0 +1,34 @@
+.main {
+  flex: 1 0 auto;
+  position: relative;
+  &.main--site-pages {
+    min-height: 100vh;
+  }
+  @include media('max', 'md') {
+    padding-top: 110px;
+  }
+  & h1.title {
+    font-size: rem(56px);
+    margin-bottom: rem(70px);
+    line-height: 1;
+    margin-left: rem(-4px);
+
+    @include media('max', 'md') {
+      font-size: 20px;
+      margin-bottom: 15px;
+      margin-left: 0;
+      letter-spacing: -1px;
+    }
+  }
+
+  & h2.title:not(.title--bg) {
+    font-size: rem(30px);
+    line-height: rem(60px);
+
+    @include media('max', 'md') {
+      font-size: 16px;
+      margin-left: 0;
+      line-height: 1;
+    }
+  }
+}

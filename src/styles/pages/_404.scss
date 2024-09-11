@@ -1,0 +1,17 @@
+.page-404 {
+  font-size: rem(22px);
+  line-height: rem(28px);
+  &__list {
+    margin-top: rem(45px);
+    p {
+      font-size: rem(22px);
+      line-height: rem(28px);
+    }
+  }
+  & img {
+    height: auto;
+  }
+  &__banner {
+    margin-top: rem(120px);
+  }
+}

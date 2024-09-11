@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@use 'sass:math';
+
+// 1. Configuration and helpers
+@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
+
+// 2. Vendors
+//@import 'libs/materialize/materialize';
+//  'vendors/normalize';
+
+// 3. Base stuff
+@import 'base/fonts', 'base/base', 'base/effects', 'base/helpers',
+  'base/animations';
+// 2. Components
+@import 'components/button', 'components/svg-icons', 'components/forms';
+// 4. Layout-related sections
+@import 'layout/header', 'layout/main', 'layout/footer', 'layout/modal';
+
+// 6. Page-specific styles
+@import 'pages/main', 'pages/404';
+
+// 7. Themes
+@import 'themes/default';

@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: rem(37px);
+  z-index: 99;
+  transition: all 0.5s;
+  @supports (scrollbar-gutter: stable) {
+    scrollbar-gutter: stable;
+  }
+
+  &.desktop-fixed {
+    margin-top: 0;
+    background-color: #ffffffad;
+    position: fixed;
+    padding: rem(16px) 0;
+    transition: all 0.5s;
+    -webkit-box-shadow: 0px 8px 5px 5px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 8px 5px 5px rgba(34, 60, 80, 0.2);
+    backdrop-filter: blur(24px);
+    @include media('max', 'md') {
+      padding: 0;
+      padding-bottom: 8px;
+    }
+  }
+  &.desktop-fixed.move-down {
+    & .header__top {
+      opacity: 0;
+      overflow: hidden;
+    }
+    & .header__bottom-wrap {
+      margin-top: 0;
+      @include media('max', 'md') {
+        margin-top: 16px;
+      }
+    }
+    & .local-counter--in-header {
+      top: rem(7px);
+      @include media('max', 'md') {
+        top: 10px;
+      }
+    }
+    & + .main .item-local-nav--sticky {
+      top: rem(95px);
+    }
+  }
+
+  @include media('max', 'md') {
+    margin-top: 0;
+  }
+}

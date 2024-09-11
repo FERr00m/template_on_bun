@@ -1,0 +1,76 @@
+#service-block-please-delete-on-production
+  style.
+    @-webkit-keyframes rotate-center {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes rotate-center {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    .service {
+      position: fixed;
+      left: 0rem;
+      top: 4rem;
+      font-size: 1rem;
+      background-color: #ffc509e6;
+      padding: 1rem;
+      z-index: 999;
+      transform: translateX(-100%);
+      transition: all 0.2s ease-in-out;
+    }
+    .service.is-open {
+      transform: translateX(0%);
+    }
+    body.modal-is-open .service {
+      z-index: 0;
+    }
+    .service__btn {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      right: -2rem;
+      top: 0;
+      border: 1px solid;
+    }
+    .service__icon {
+      -webkit-animation: rotate-center 5s linear infinite both;
+      animation: rotate-center 5s linear infinite both;
+    }
+  .service.js-service
+    button.service__btn.js-service-btn
+      svg.service__icon(width='20' height='20')
+        use(xlink:href='#icon-cog')
+        symbol#icon-cog(viewbox='0 0 32 32')
+          path(d='M29.181 19.070c-1.679-2.908-0.669-6.634 2.255-8.328l-3.145-5.447c-0.898 0.527-1.943 0.829-3.058 0.829-3.361 0-6.085-2.742-6.085-6.125h-6.289c0.008 1.044-0.252 2.103-0.811 3.070-1.679 2.908-5.411 3.897-8.339 2.211l-3.144 5.447c0.905 0.515 1.689 1.268 2.246 2.234 1.676 2.903 0.672 6.623-2.241 8.319l3.145 5.447c0.895-0.522 1.935-0.82 3.044-0.82 3.35 0 6.067 2.725 6.084 6.092h6.289c-0.003-1.034 0.259-2.080 0.811-3.038 1.676-2.903 5.399-3.894 8.325-2.219l3.145-5.447c-0.899-0.515-1.678-1.266-2.232-2.226zM16 22.479c-3.578 0-6.479-2.901-6.479-6.479s2.901-6.479 6.479-6.479c3.578 0 6.479 2.901 6.479 6.479s-2.901 6.479-6.479 6.479z')
+
+    h2 Страницы
+    ul
+      each page in pages
+        li
+          +link(page.name, page.path)
+    h2 Модалки
+    ul
+      each modal in modals
+        li
+          +link(modal.name, modal.path)
+  script.
+    window.addEventListener('load', function() {
+      document.querySelector('.js-service-btn').addEventListener('click', ()=> {
+        document.querySelector('.js-service').classList.toggle('is-open')
+      })
+    })

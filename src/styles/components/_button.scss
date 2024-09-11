@@ -1,0 +1,171 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+// Переменные для кнопки
+
+// … включите сюда любые правила для кнопки:
+// - миксины
+// - плейсхолдеры
+// - функции
+
+/**
+ * Кнопки
+ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease-out;
+  border: none;
+  padding: 0 rem(16px);
+  border-radius: 5px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+  background-color: var(--font-main-color);
+  color: #ffffff;
+  text-transform: none;
+  font-size: rem(18px);
+  height: auto;
+  line-height: 1;
+
+  @include media('max', 'md') {
+    //box-shadow: none;
+  }
+
+  &--brand {
+    background-color: var(--brand-color);
+    &:hover {
+      color: #fff;
+    }
+  }
+  &--brand-dark {
+    background-color: var(--brand-dark-color);
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &--inline {
+    display: inline-block;
+  }
+  &--text-center {
+    justify-content: center;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.call-btn {
+  gap: rem(13px);
+  height: rem(36px);
+  font-size: rem(14px);
+  letter-spacing: -0.025em;
+  line-height: 1;
+
+  &--mobile {
+    background-color: var(--font-second-color);
+    color: var(--font-special-color);
+    height: 30px;
+    font-size: 11px;
+    margin-bottom: 8px;
+
+    & .svg-icon {
+      fill: var(--font-special-color);
+    }
+  }
+}
+
+.catalog-btn {
+  gap: rem(26px);
+  height: rem(46px);
+  min-width: rem(160px);
+
+  &:focus {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.menu-btn {
+  min-width: 90px;
+}
+.close-btn-mobile {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 13px;
+  background-color: transparent;
+
+  &:active,
+  &:focus {
+    border: none;
+    box-shadow: none;
+  }
+
+  & span {
+    width: 100%;
+    left: 0;
+    height: 2px;
+    background-color: var(--font-special-color);
+    position: absolute;
+    transition: all 0.3s 0.3s ease;
+  }
+
+  &.is-opened span:first-child {
+    transform: rotate(45deg);
+  }
+
+  &.is-opened span:last-child {
+    transform: rotate(-45deg);
+  }
+}
+.add-btn {
+  font-size: rem(16px);
+  min-height: rem(36px);
+  & .svg-icon {
+    fill: #fff;
+    margin-right: rem(12px);
+  }
+  &--large {
+    font-size: rem(18px);
+    min-height: rem(46px);
+    min-width: rem(170px);
+    justify-content: space-evenly;
+    background-color: var(--brand-dark-color);
+  }
+}
+.favorite-btn {
+  color: var(--font-special-color);
+  background-color: transparent;
+  min-height: rem(35px);
+  box-shadow: none;
+  & .svg-icon {
+    margin-right: rem(16px);
+    fill: var(--font-special-color);
+  }
+  &:active,
+  &:focus {
+    background-color: transparent;
+  }
+}
+.toggler-btn {
+  z-index: 35;
+  width: rem(20px);
+  height: rem(20px);
+  padding: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.active {
+    & .svg-icon {
+      fill: var(--font-special-color);
+      transform: rotate(180deg);
+    }
+  }
+}
+.message-btn {
+  align-self: flex-end;
+  margin-bottom: rem(40px);
+}

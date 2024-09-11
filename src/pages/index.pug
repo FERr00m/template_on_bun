@@ -1,0 +1,22 @@
+extends ../layouts/layout-site-pages
+
+block main-content
+  header.header
+  main.main.main--site-pages.pt-5(style=`background-image: url("${site.enter_img}");background-position: right;background-repeat: no-repeat;background-size: contain;`)
+
+    section.section
+      .container
+        h1.title.mb-3 Страницы
+        ul
+          each page in pages
+            li
+              +link(page.name, page.path)
+        h1.title.mb-3 Модалки
+        ul
+          each modal in modals
+            li
+              +link(modal.name, modal.path)
+        h1.title.mb-3 Ui Kit
+        ul
+          li
+            +link('Подробнее', '/uikit.html')

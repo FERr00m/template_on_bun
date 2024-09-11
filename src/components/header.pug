@@ -1,0 +1,108 @@
+//-include ./menu_mobile
+header.header.jq-header
+  .container
+    .header__top.d-none.d-md-block
+      .row
+        .col-12.col-md-8
+          nav.nav
+            ul.nav__list
+              li.nav__item
+                +link('').nav__link
+                  +icon('home', 14, 16)
+              each item in links
+                li.nav__item
+                  +link(item.name).nav__link
+        .col-12.col-md-4
+          .additional-nav-block
+            .additional-nav-block__btns-wrap
+              .additional-nav-block__item.js-popup-wrap
+                button.additional-nav-block__btn.waves-effect.waves-light.js-btn-popup.lang-btn
+                  +icon('arrow-down-circle-filled', 20, 20)
+                span En
+                .additional-nav-block__item-popup.nav-item-popup.js-popup
+                  ul.nav-item-popup__list
+                    li.nav-item-popup__list-item
+                      +link().nav-item-popup__list-link.active
+                        +icon('check', 9, 7).nav-item-popup__list-icon
+                        .nav-item-popup__list-text En - English
+                    li.nav-item-popup__list-item
+                      +link().nav-item-popup__list-link
+                        +icon('check', 9, 7).nav-item-popup__list-icon
+                        .nav-item-popup__list-text Ru - Русский
+                    li.nav-item-popup__list-item
+                      +link().nav-item-popup__list-link
+                        +icon('check', 9, 7).nav-item-popup__list-icon
+                        .nav-item-popup__list-text By - Беларускі
+                    li.nav-item-popup__list-item
+                      +link().nav-item-popup__list-link
+                        +icon('check', 9, 7).nav-item-popup__list-icon
+                        .nav-item-popup__list-text Kz - Казакша
+
+
+
+              .additional-nav-block__item.js-popup-wrap
+                button.additional-nav-block__btn.waves-effect.waves-light.js-btn-popup.phone-btn
+                  +icon('arrow-down-circle-filled', 20, 20)
+                a(href=contacts.phone.value)=contacts.phone.text
+                .additional-nav-block__item-popup.contacts-item-popup.js-popup
+                  .contacts-item-popup__phones
+                    .contacts-item-popup__phones-text Контакты:
+                    +link('', 'tel:78123855824')
+                      span +7 (812)&nbsp;
+                      | 385-58-25
+                    br
+                    +link('', 'tel:78123857648')
+                      span +7 (812)&nbsp;
+                      | 385-76-48&nbsp;
+                      span (факс)
+                  p.contacts-item-popup__address
+                    =contacts.address.text
+                  .contacts-item-popup__email
+                    | Эл. почта&nbsp;
+                    +link(contacts.email.text, contacts.email.value)
+
+
+            button.btn.call-btn.waves-effect.waves-light.modal-trigger(data-target='modal-callback')
+              | Перезвонить Вам?
+              +icon('phone', 20, 15)
+
+    .header__bottom
+      .row
+        .col-12
+          .header__bottom-wrap
+            +link('').logo
+              +picture('logo', 210, 34, 'Логотип', 'png')
+              span.logo__text.d-none.d-md-block ООО «Специальные Системы. Фотоника» официальный дистрибьютор в России и ЕАЭС
+            .user-navigation
+              .user-navigation__catalog.js-user-navigation
+                button.btn.catalog-btn.btn--brand-dark.waves-effect.waves-light.js-catalog-btn.d-none.d-md-flex
+                  svg.ham(viewbox='0 0 100 100' width='40')
+                    path.line.top(d='m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20')
+                    path.line.middle(d='m 30,50 h 40')
+                    path.line.bottom(d='m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20')
+                  | Каталог
+                button.btn.menu-btn.btn--brand.waves-effect.waves-light.d-flex.d-md-none.sidenav-trigger(data-target='nav-mobile')
+                  svg.ham(viewbox='0 0 100 100' width='40')
+                    path.line.top(d='m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20')
+                    path.line.middle(d='m 30,50 h 40')
+                    path.line.bottom(d='m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20')
+                  | Меню
+                form.user-navigation__search-form.search-form-small
+                  button.search-form-small__btn.waves-effect.waves-light(type='submit')
+                    +icon('search', 16, 17)
+                  input.search-form-small__input.browser-default(type="search" name='search' placeholder='Поиск по сайту...' autocomplete='off')
+            ul.user-links
+              li.user-links__item
+                +link().user-links__link.modal-trigger(data-target='modal-auth')
+                  +icon('user', 27, 30).user-links__svg
+              li.user-links__item
+                +link().user-links__link
+                  +icon('cart', 36, 30).user-links__svg
+                  span.local-counter.local-counter--in-header 10
+              li.user-links__item
+                +link().user-links__link
+                  +icon('favorite', 32, 26).user-links__svg
+                  span.local-counter.local-counter--in-header 5
+              li.user-links__item
+                +link().user-links__link
+                  +icon('feedback', 34, 32).user-links__svg
