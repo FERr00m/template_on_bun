@@ -1,18 +1,23 @@
 include ../mixins/index
 head
   meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  meta(name='description' content=`${site.description}`)
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(name='description', content=`${site.description}`)
 
   include ./_opengraph
 
   each font in fonts
-    link(rel='preload' href=`/assets/fonts/${font}.woff2` as='font' crossorigin)
+    link(
+      rel='preload',
+      href=`/assets/fonts/${font}.woff2`,
+      as='font',
+      crossorigin
+    )
 
   include ./_favicon
 
   include ../styles
   include ../scripts
 
-  title=site.title
+  title= site.title

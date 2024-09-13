@@ -1,10 +1,8 @@
 extends ../layouts/main
 
 block main-content
-
   main.main
     .container
-
       h1.title UI KIT
 
       ul(uk-accordion='')
@@ -23,7 +21,11 @@ block main-content
           .uk-accordion-content
             p
               | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.
-      div(class='uk-child-width-1-3@m' uk-grid='' uk-scrollspy='cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true')
+      div(
+        class='uk-child-width-1-3@m',
+        uk-grid='',
+        uk-scrollspy='cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true'
+      )
         div
           .uk-card.uk-card-default.uk-card-body
             h3.uk-card-title Fade

@@ -5,7 +5,6 @@ block main-content
     .container
       h1.title.mb-5= site.title
     section.section
-
       .container
         +icon('icons8-vk')
         h2.title.mb-3 Страницы
@@ -22,7 +21,7 @@ block main-content
         ul
           li
             +link('Подробнее', '/uikit.html')
-  script(type="module").
+  script(type='module').
     import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js';
 
     neonCursor({
