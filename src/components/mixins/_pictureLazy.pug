@@ -1,0 +1,4 @@
+mixin pictureLazy(name, w=500, h=500, alt='', ext='jpg')
+  picture&attributes(attributes)
+    source(type='image/webp' srcset='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' data-srcset=`/assets/img/${name}.webp`)
+    img.lazy(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src=`/assets/img/${name}.${ext}` width=`${w}`, height=`${h}` alt=`${alt}` loading="lazy")

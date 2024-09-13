@@ -1,12 +1,12 @@
-extends ../layouts/layout
+extends ../layouts/main
 
 block main-content
 
   main.main
     .container
-      //-include ../_components/breadcrumbs
+
       h1.title UI KIT
-      img(src="/img/404.png", alt="")
+
       ul(uk-accordion='')
         li.uk-open
           a.uk-accordion-title(href='') Item 1
@@ -48,3 +48,4 @@ block main-content
           .uk-card.uk-card-default.uk-card-body
             h3.uk-card-title Fade
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      +pictureLazy("good2_0", 100, 100, "", "png")

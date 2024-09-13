@@ -1,0 +1,15 @@
+doctype html
+html(lang=`${site.lang}`)
+  include ../components/head/index
+
+  body.not-ready(itemscope="itemscope" itemtype="https://schema.org/WebPage")
+
+    noscript
+      strong
+        | We're sorry but this project doesn't work properly without JavaScript enabled. Please enable it to continue.
+    include ../components/service
+    include ../components/main-loader
+    .content
+      block main-content
+
+    include ../components/modals/all_modals

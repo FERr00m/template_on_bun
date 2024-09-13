@@ -1,6 +1,6 @@
 doctype html
-html(lang='ru')
-  include ./head
+html(lang=`${site.lang}`)
+  include ../components/head/index
 
   body.not-ready(itemscope="itemscope" itemtype="https://schema.org/WebPage")
     noscript
@@ -14,4 +14,4 @@ html(lang='ru')
       block main-content
 
       include ../components/footer
-    //-include ../_components/modals
+    include ../components/modals/all_modals

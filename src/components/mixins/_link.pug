@@ -1,0 +1,8 @@
+mixin link(name='', href='javascript:void(0)')
+  a(href=href)&attributes(attributes)= name
+    if block
+      block
+    else
+
+//- EXAMPLE
+//- +link(name?, href?)(class="promo-index__link js-hover-btn hover-btn-animation")

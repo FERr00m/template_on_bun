@@ -1,0 +1,6 @@
+mixin icon(name, w=100, h=100)
+  svg(class=`svg-icon svg-icon--${name}`, width=`${w}`, height=`${h}`)&attributes(attributes)
+    use(xlink:href=`/assets/svg/icons.svg#${name}`)
+    if block
+      block
+    else
