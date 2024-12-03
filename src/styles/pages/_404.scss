@@ -1,17 +1,19 @@
+@use "../abstracts/functions";
+
 .page-404 {
-  font-size: rem(22px);
-  line-height: rem(28px);
+  font-size: functions.rem(22px);
+  line-height: functions.rem(28px);
   &__list {
-    margin-top: rem(45px);
+    margin-top: functions.rem(45px);
     p {
-      font-size: rem(22px);
-      line-height: rem(28px);
+      font-size: functions.rem(22px);
+      line-height: functions.rem(28px);
     }
   }
   & img {
     height: auto;
   }
   &__banner {
-    margin-top: rem(120px);
+    margin-top: functions.rem(120px);
   }
 }

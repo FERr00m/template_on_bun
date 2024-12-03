@@ -1,3 +1,6 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
 .modal-wrap {
   display: none;
   position: fixed;
@@ -28,18 +31,18 @@
 }
 .modal {
   position: absolute;
-  max-width: rem(610px);
+  max-width: functions.rem(610px);
   border-radius: 10px;
   max-height: unset;
   overscroll-behavior: contain;
   scrollbar-width: thin;
   &#modal-consult {
-    max-width: rem(830px);
+    max-width: functions.rem(830px);
     & .form__row {
-      gap: rem(20px);
+      gap: functions.rem(20px);
     }
   }
-  @include media('max', 'md') {
+  @include mixins.media('max', 'md') {
     width: 100%;
     max-width: 100%;
     top: 0 !important;

@@ -2,7 +2,14 @@
   "name": "basic-tamplate",
   "version": "1.0.0",
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
     "@prettier/plugin-pug": "^3.1.0",
+    "@storybook/addon-essentials": "^8.4.6",
+    "@storybook/addon-interactions": "^8.4.6",
+    "@storybook/blocks": "^8.4.6",
+    "@storybook/html": "^8.4.6",
+    "@storybook/html-vite": "^8.4.6",
+    "@storybook/test": "^8.4.6",
     "@vituum/vite-plugin-pug": "^1.1.0",
     "autoprefixer": "^10.4.20",
     "chokidar": "^3.6.0",
@@ -12,6 +19,7 @@
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
     "sharp": "^0.33.5",
+    "storybook": "^8.4.6",
     "svg-sprite": "^2.0.4",
     "vite": "^5.4.1",
     "vituum": "^1.1.1"
@@ -26,7 +34,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "images": "node 'scripts/convertImages.js'",
-    "svg": "node 'scripts/svgSprite.js'"
+    "svg": "node 'scripts/svgSprite.js'",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "type": "module"
 }

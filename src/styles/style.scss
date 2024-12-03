@@ -2,23 +2,34 @@
 @use 'sass:math';
 
 // 1. Configuration and helpers
-@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
 
 // 2. Vendors
 //@import 'libs/materialize/materialize';
 //  'vendors/normalize';
 
 // 3. Base stuff
-@import 'base/fonts', 'base/base', 'base/effects', 'base/helpers',
-  'base/animations';
+@use 'base/fonts';
+@use 'base/base';
+@use 'base/effects';
+@use 'base/helpers';
+@use 'base/animations';
 // 2. Components
-@import 'components/main-loader', 'components/button', 'components/svg-icons',
-  'components/forms';
+@use 'components/main-loader';
+@use 'components/button';
+@use 'components/svg-icons';
+@use 'components/forms';
 // 4. Layout-related sections
-@import 'layout/header', 'layout/main', 'layout/footer', 'layout/modal';
+@use 'layout/header';
+@use 'layout/main';
+@use 'layout/footer';
+@use 'layout/modal';
 
 // 6. Page-specific styles
-@import 'pages/main', 'pages/404';
+@use 'pages/main' as main2;
+@use 'pages/404' as p404;
 
 // 7. Themes
-@import 'themes/default';
+@use 'themes/default';

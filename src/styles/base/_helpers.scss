@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 // -----------------------------------------------------------------------------
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
@@ -26,9 +30,9 @@
   /* 3 */
 
   @each $point,
-  $width in $breakpoints {
-    @include respond-to($point) {
-      max-width: map-get($container-size, $point);
+  $width in variables.$breakpoints {
+    @include mixins.respond-to($point) {
+      max-width: map.get(variables.$container-size, $point);
     }
   }
 }
@@ -47,7 +51,7 @@
 }
 
 .over-hide {
-  @include media('max', 'md') {
+  @include mixins.media('max', 'md') {
     overflow: hidden;
   }
 }

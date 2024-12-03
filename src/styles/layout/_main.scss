@@ -1,3 +1,6 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
 .main {
   flex: 1 0 auto;
   position: relative;
@@ -20,16 +23,16 @@
       top: 0;
     }
   }
-  @include media('max', 'md') {
+  @include mixins.media('max', 'md') {
     padding-top: 110px;
   }
   & h1.title {
-    font-size: rem(56px);
-    margin-bottom: rem(70px);
+    font-size: functions.rem(56px);
+    margin-bottom: functions.rem(70px);
     line-height: 1;
-    margin-left: rem(-4px);
+    margin-left: functions.rem(-4px);
 
-    @include media('max', 'md') {
+    @include mixins.media('max', 'md') {
       font-size: 20px;
       margin-bottom: 15px;
       margin-left: 0;
@@ -38,10 +41,10 @@
   }
 
   & h2.title:not(.title--bg) {
-    font-size: rem(30px);
-    line-height: rem(60px);
+    font-size: functions.rem(30px);
+    line-height: functions.rem(60px);
 
-    @include media('max', 'md') {
+    @include mixins.media('max', 'md') {
       font-size: 16px;
       margin-left: 0;
       line-height: 1;

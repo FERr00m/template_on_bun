@@ -1,10 +1,12 @@
+@use "../abstracts/functions";
+
 .svg-icon {
   transition: all 0.3s ease;
   fill: var(--font-main-color);
   flex-shrink: 0;
 
   &--home {
-    width: rem(14px);
-    height: rem(16px);
+    width: functions.rem(14px);
+    height: functions.rem(16px);
   }
 }

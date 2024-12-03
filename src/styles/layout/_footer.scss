@@ -1,14 +1,17 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .footer {
   flex: 0 0 auto;
-  min-height: rem(345px);
+  min-height: functions.rem(345px);
   background-color: var(--font-special-color);
-  padding: rem(80px) 0;
+  padding: functions.rem(80px) 0;
   color: #ffffff;
 
-  @include media('max', 'md') {
+  @include mixins.media('max', 'md') {
     margin-top: 40px;
   }
 }

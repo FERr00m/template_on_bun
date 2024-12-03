@@ -1,3 +1,4 @@
+@use "sass:list";
 @mixin obj($w, $h, $bg) {
   width: $w;
   height: $h;
@@ -6,7 +7,7 @@
 
 @mixin anim($listName, $delay) {
   @each $currentBox in $listName {
-    $i: index($listName, $currentBox);
+    $i: list.index($listName, $currentBox);
     &:nth-child(#{$currentBox}) {
       animation-delay: 0.1s * $i + $delay;
     }

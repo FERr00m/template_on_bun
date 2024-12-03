@@ -1,3 +1,7 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
@@ -35,11 +39,11 @@ html {
     scrollbar-gutter: stable;
   }
 
-  @include media('max', 'md') {
+  @include mixins.media('max', 'md') {
     font-size: 12px;
   }
 
-  @include media('min', 'xxl') {
+  @include mixins.media('min', 'xxl') {
     font-size: calc(100vmax / 120);
   }
 }
@@ -53,8 +57,8 @@ html {
 
 body {
   height: 100%;
-  font-family: var(--main-font), $text-font-stack;
-  font-size: rem(16px);
+  font-family: var(--main-font), variables.$text-font-stack;
+  font-size: functions.rem(16px);
   line-height: 21px;
   font-style: normal;
   font-weight: normal;
@@ -83,8 +87,8 @@ body {
 }
 
 html::-webkit-scrollbar {
-  height: rem(5px);
-  width: rem(10px);
+  height: functions.rem(5px);
+  width: functions.rem(10px);
   background-color: #f9f9fd;
   //border-radius: 10px;
 }
@@ -210,9 +214,9 @@ p {
 }
 
 ._container {
-  max-width: rem(1454px);
+  max-width: functions.rem(1454px);
   margin: 0 auto;
-  padding: 0 rem(12px);
+  padding: 0 functions.rem(12px);
 
   &--relative {
     position: relative;
@@ -220,11 +224,11 @@ p {
 }
 
 .container {
-  @include media('max', 'md') {
+  @include mixins.media('max', 'md') {
     padding: 0 14px;
   }
 
-  @include media('min', 'md') {
+  @include mixins.media('min', 'md') {
     max-width: 90.875rem;
   }
 }
@@ -265,18 +269,18 @@ button[disabled] {
 .title {
   font-family: var(--main-font-bold);
   color: var(--font-main-color);
-  font-size: rem(36px);
-  line-height: rem(60px);
+  font-size: functions.rem(36px);
+  line-height: functions.rem(60px);
   font-weight: 800;
   letter-spacing: -0.05em;
 
   &--h3 {
-    font-size: rem(30px);
-    line-height: rem(36px);
-    margin: rem(50px) 0 rem(45px);
+    font-size: functions.rem(30px);
+    line-height: functions.rem(36px);
+    margin: functions.rem(50px) 0 functions.rem(45px);
   }
 
-  @include media('max', 'md') {
+  @include mixins.media('max', 'md') {
     line-height: 1.1;
     font-size: 15px;
   }

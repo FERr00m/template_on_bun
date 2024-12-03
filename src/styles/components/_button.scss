@@ -1,3 +1,6 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
@@ -16,17 +19,17 @@
   align-items: center;
   transition: all 0.2s ease-out;
   border: none;
-  padding: 0 rem(16px);
+  padding: 0 functions.rem(16px);
   border-radius: 5px;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
   background-color: var(--font-main-color);
   color: #ffffff;
   text-transform: none;
-  font-size: rem(18px);
+  font-size: functions.rem(18px);
   height: auto;
   line-height: 1;
 
-  @include media('max', 'md') {
+  @include mixins.media('max', 'md') {
     //box-shadow: none;
   }
 

@@ -1,3 +1,8 @@
+@use "sass:map";
+@use "sass:meta";
+@use "functions";
+@use "variables";
+
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
@@ -34,9 +39,9 @@
 
 @mixin respond-to($breakpoint) {
   // If the key exists in the map
-  @if map-has-key($breakpoints, $breakpoint) {
+  @if map.has-key(variables.$breakpoints, $breakpoint) {
     // Prints a media query based on the value
-    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+    @media #{meta.inspect(map.get(variables.$breakpoints, $breakpoint))} {
       @content;
     }
   }
@@ -44,7 +49,7 @@
   // If the key doesn't exist in the map
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+        + "Available breakpoints are: #{map.keys(variables.$breakpoints)}.";
   }
 }
 
@@ -61,7 +66,7 @@
 }
 
 @mixin media($minmax, $media) {
-  @each $size, $resolution in $sizes {
+  @each $size, $resolution in variables.$sizes {
     @if $media == $size {
       @media only screen and (#{$minmax}-width: $resolution) {
         @content;
@@ -215,17 +220,17 @@
 }
 
 @mixin h1 {
-  font-size: rem(32px);
+  font-size: functions.rem(32px);
   font-weight: 900;
 }
 
 @mixin h2 {
-  font-size: rem(40px);
+  font-size: functions.rem(40px);
   font-weight: 900;
 }
 
 @mixin h3 {
-  font-size: rem(28px);
+  font-size: functions.rem(28px);
   font-weight: 900;
 }
 @mixin scrollBox($contain: false) {
@@ -245,20 +250,20 @@
   }
 
   &::-webkit-scrollbar {
-    height: rem(5px);
-    width: rem(10px);
+    height: functions.rem(5px);
+    width: functions.rem(10px);
     background-color: #f9f9fd;
-    border-radius: rem(5px);
+    border-radius: functions.rem(5px);
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: rem(5px);
+    border-radius: functions.rem(5px);
     background-color: var(--font-main-color);
   }
 
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
-    border-radius: rem(5px);
+    border-radius: functions.rem(5px);
     background-color: #f9f9fd;
   }
 }

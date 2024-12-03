@@ -2,7 +2,7 @@
 // This file contains all application-wide Sass functions.
 // -----------------------------------------------------------------------------
 @use 'sass:math';
-@import 'variables';
+@use 'variables';
 /// Native `url(..)` function wrapper
 /// @param {String} $base - base URL for the asset
 /// @param {String} $type - asset type folder (e.g. `fonts/`)
@@ -17,7 +17,7 @@
 /// @param {String} $base [$base-url] - base URL
 /// @return {Url}
 /// @require $base-url
-@function image($path, $base: $base-url) {
+@function image($path, $base: variables.$base-url) {
   @return asset($base, 'img/', $path);
 }
 
@@ -26,7 +26,7 @@
 /// @param {String} $base [$base-url] - base URL
 /// @return {Url}
 /// @require $base-url
-@function font($path, $base: $base-url) {
+@function font($path, $base: variables.$base-url) {
   @return asset($base, 'fonts/', $path);
 }
 

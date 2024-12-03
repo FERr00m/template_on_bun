@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../abstracts/variables";
+
 // -----------------------------------------------------------------------------
 // This file contains effects.
 // -----------------------------------------------------------------------------
@@ -17,7 +20,7 @@
   left: 51%;
   right: 51%;
   bottom: 0;
-  background: $brand-color;
+  background: variables.$brand-color;
   height: 4px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
@@ -62,7 +65,7 @@
   width: 0;
   height: 0;
   border-radius: 100%;
-  background: lighten($font-special-color, 8%);
+  background: color.adjust(variables.$font-special-color, $lightness: 8%);
   transform: translate(-50%, -50%);
   transition: width var(--time), padding-top var(--time);
 }
