@@ -8,8 +8,15 @@ $fontMainBlack: 'Gilroy-Black';
 
 /// Regular font family
 /// @type List
-$text-font-stack: Arial, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', sans-serif !default;
+$text-font-stack:
+  Arial,
+  -apple-system,
+  system-ui,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -52,8 +59,7 @@ $sizes: (
   // 992px
   'xl': 75em,
   // 1200px
-  'xxl': 120em,
-  // 1920px
+  'xxl': 120em, // 1920px
 );
 
 /// Breakpoints map

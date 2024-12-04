@@ -4,42 +4,50 @@
 /*=====Fonts=====*/
 /*Gilroy*/
 @font-face {
-  font-family: 'Gilroy-Black';
-  src: local('Gilroy-Black'),
+  font-family: 'Gilroy';
+  src:
+    local('Gilroy-Black'),
     url('../assets/fonts/Gilroy-Black.woff2') format('woff2'),
     url('../assets/fonts/Gilroy-Black.woff') format('woff'),
     url('../assets/fonts/Gilroy-Black.ttf') format('ttf');
   font-style: normal;
+  font-weight: 900;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy-Bold';
-  src: local('Gilroy-Bold'),
+  font-family: 'Gilroy';
+  src:
+    local('Gilroy-Bold'),
     url('../assets/fonts/Gilroy-Bold.woff2') format('woff2'),
     url('../assets/fonts/Gilroy-Bold.woff') format('woff'),
     url('../assets/fonts/Gilroy-Bold.ttf') format('ttf');
   font-style: normal;
+  font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy-Medium';
-  src: local('Gilroy-Medium'),
+  font-family: 'Gilroy';
+  src:
+    local('Gilroy-Medium'),
     url('../assets/fonts/Gilroy-Medium.woff2') format('woff2'),
     url('../assets/fonts/Gilroy-Medium.woff') format('woff'),
     url('../assets/fonts/Gilroy-Medium.ttf') format('ttf');
   font-style: normal;
+  font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy-Regular';
-  src: local('Gilroy-Regular'),
+  font-family: 'Gilroy';
+  src:
+    local('Gilroy-Regular'),
     url('../assets/fonts/Gilroy-Regular.woff2') format('woff2'),
     url('../assets/fonts/Gilroy-Regular.woff') format('woff'),
     url('../assets/fonts/Gilroy-Regular.ttf') format('ttf');
   font-style: normal;
+  font-weight: 400;
   font-display: swap;
 }
 

@@ -1,20 +1,11 @@
-@use '../abstracts/functions';
-@use '../abstracts/mixins';
+@use '../../scss/base';
+@use '../../scss/functions';
+@use '../../scss/mixins';
 
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
-// Переменные для кнопки
-
-// … включите сюда любые правила для кнопки:
-// - миксины
-// - плейсхолдеры
-// - функции
-
-/**
- * Кнопки
- */
 .button {
+  cursor: pointer;
+  border: none;
+  outline: none;
   display: inline-flex;
   align-items: center;
   transition: all 0.2s ease-out;
@@ -27,6 +18,10 @@
   text-transform: none;
   font-size: functions.rem(18px);
   height: auto;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
 
   @include mixins.media('max', 'md') {
     //box-shadow: none;
@@ -51,7 +46,13 @@
   &--text-center {
     justify-content: center;
   }
-  &:active {
+  &:active,
+  &focus {
+    border-color: var(--brand-color);
+    outline: none;
+    -webkit-box-shadow: 0 0 0 0.05rem var(--brand-color);
+    box-shadow: 0 0 0 0.05rem var(--brand-color);
+    outline: 1px solid var(--brand-color);
     opacity: 0.8;
   }
 }

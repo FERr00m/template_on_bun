@@ -1,5 +1,5 @@
-@use "sass:color";
-@use "../abstracts/variables";
+@use 'sass:color';
+@use '../abstracts/variables';
 
 // -----------------------------------------------------------------------------
 // This file contains effects.
@@ -35,15 +35,6 @@
   left: 0;
   right: 0;
 }
-// Blur
-.box-wrap:hover .box {
-  filter: blur(3px);
-}
-.box-wrap:hover .box:hover {
-  transform: scale(1);
-  filter: blur(0px);
-  opacity: 1;
-}
 /*====Animation=====*/
 .hover-btn-animation {
   --width: 100%;
@@ -67,7 +58,9 @@
   border-radius: 100%;
   background: color.adjust(variables.$font-special-color, $lightness: 8%);
   transform: translate(-50%, -50%);
-  transition: width var(--time), padding-top var(--time);
+  transition:
+    width var(--time),
+    padding-top var(--time);
 }
 .hover-btn-animation:hover .span {
   width: calc(var(--width) * 2.25);

@@ -33,8 +33,8 @@
     "dev:all": "npm-run-all -p images svg dev",
     "build": "vite build",
     "preview": "vite preview",
-    "images": "node 'scripts/convertImages.js'",
-    "svg": "node 'scripts/svgSprite.js'",
+    "images": "node scripts/convertImages.js",
+    "svg": "node scripts/svgSprite.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

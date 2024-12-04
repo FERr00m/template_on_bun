@@ -1,0 +1,5 @@
+mixin button(text='Кнопка', type='button')
+  button.button(type=type)&attributes(attributes)= text
+    if block
+      block
+    else

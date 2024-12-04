@@ -4,50 +4,5 @@ block main-content
   main.main
     .container
       h1.title UI KIT
-
-      ul(uk-accordion='')
-        li.uk-open
-          a.uk-accordion-title(href='') Item 1
-          .uk-accordion-content
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        li
-          a.uk-accordion-title(href='') Item 2
-          .uk-accordion-content
-            p
-              | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.
-        li
-          a.uk-accordion-title(href='') Item 3
-          .uk-accordion-content
-            p
-              | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.
-      div(
-        class='uk-child-width-1-3@m',
-        uk-grid='',
-        uk-scrollspy='cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true'
-      )
-        div
-          .uk-card.uk-card-default.uk-card-body
-            h3.uk-card-title Fade
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        div
-          .uk-card.uk-card-default.uk-card-body
-            h3.uk-card-title Fade
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        div
-          .uk-card.uk-card-default.uk-card-body
-            h3.uk-card-title Fade
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        div
-          .uk-card.uk-card-default.uk-card-body
-            h3.uk-card-title Fade
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        div
-          .uk-card.uk-card-default.uk-card-body
-            h3.uk-card-title Fade
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        div
-          .uk-card.uk-card-default.uk-card-body
-            h3.uk-card-title Fade
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      +button('But')
       +pictureLazy("good2_0", 100, 100, "", "png")

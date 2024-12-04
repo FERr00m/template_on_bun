@@ -15,7 +15,7 @@ export default {
     backgroundColor: { control: 'color' },
     label: { control: 'text' },
     onClick: { action: 'onClick' },
-    primary: { control: 'boolean' },
+    brand: { control: 'boolean' },
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
@@ -32,7 +32,7 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary = {
   args: {
-    primary: true,
+    brand: true,
     label: 'Button',
   },
 };

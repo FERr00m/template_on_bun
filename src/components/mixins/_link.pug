@@ -1,5 +1,5 @@
-mixin link(name='', href='javascript:void(0)')
-  a(href=href)&attributes(attributes)= name
+mixin link(text='', href='javascript:void(0)')
+  a(href=href)&attributes(attributes)= text
     if block
       block
     else

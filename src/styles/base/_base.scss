@@ -1,6 +1,6 @@
-@use "../abstracts/functions";
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use '../abstracts/functions';
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
@@ -18,10 +18,7 @@
   --bg-color: #ffffff;
   --alert-color: #f21a05;
   --scrollTop: 0;
-  --main-font: 'Gilroy-Regular';
-  --main-font-medium: 'Gilroy-Medium';
-  --main-font-bold: 'Gilroy-Bold';
-  --main-font-black: 'Gilroy-Black';
+  --main-font: 'Gilroy';
 }
 *,
 *::before,
@@ -61,7 +58,7 @@ body {
   font-size: functions.rem(16px);
   line-height: 21px;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   color: var(--font-main-color);
   position: relative;
   background-color: transparent;
@@ -271,7 +268,7 @@ button[disabled] {
   color: var(--font-main-color);
   font-size: functions.rem(36px);
   line-height: functions.rem(60px);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.05em;
 
   &--h3 {

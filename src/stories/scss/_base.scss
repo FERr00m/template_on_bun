@@ -1,0 +1,28 @@
+@use 'functions';
+@use 'mixins';
+@use 'variables';
+
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+:root {
+  --brand-color: #f21a05;
+  --brand-dark-color: #e60012;
+  --font-main-color: #333333;
+  --font-second-color: #ffffff;
+  --font-special-color: #666666;
+  --bg-color: #ffffff;
+  --alert-color: #f21a05;
+  --scrollTop: 0;
+  --main-font: 'Gilroy';
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  caret-color: var(--brand-color);
+}

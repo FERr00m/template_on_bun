@@ -1,5 +1,5 @@
-@use "../abstracts/functions";
-@use "../abstracts/mixins";
+@use '../abstracts/functions';
+@use '../abstracts/mixins';
 
 .main {
   flex: 1 0 auto;
@@ -7,11 +7,6 @@
   &.main--site-pages {
     overflow: hidden;
     min-height: 100vh;
-    background-image: url('/assets/img/good2_0.webp');
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
-    animation: changeBG 8s infinite linear;
     color: #ffffff;
     & * {
       color: #ffffff;
