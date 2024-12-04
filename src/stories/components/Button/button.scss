@@ -18,6 +18,14 @@
   text-transform: none;
   font-size: functions.rem(18px);
   height: auto;
+  &--small {
+    font-size: functions.rem(14px);
+    padding: functions.rem(6px) functions.rem(14px);
+  }
+  &--large {
+    font-size: functions.rem(18px);
+    padding: functions.rem(12px) functions.rem(20px);
+  }
 
   &[disabled] {
     cursor: not-allowed;

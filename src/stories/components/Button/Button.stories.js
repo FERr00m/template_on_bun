@@ -32,13 +32,20 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary = {
   args: {
-    brand: true,
+    brand: false,
     label: 'Button',
   },
 };
 
-export const Secondary = {
+export const Brand = {
   args: {
+    brand: true,
+    label: 'Button',
+  },
+};
+export const BrandDark = {
+  args: {
+    brandDark: true,
     label: 'Button',
   },
 };
